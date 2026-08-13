@@ -1,0 +1,22 @@
+# Secrets
+.env
+.streamlit/secrets.toml
+*_api_key*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Docking outputs & structures (large / regenerable — remove this block if you want them tracked)
+*.pdbqt
+*.pdb
+receptor/
+*_docked.pdbqt
+*_report.txt
+history*.json
+
+# OS
+.DS_Store
