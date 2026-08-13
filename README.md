@@ -1,9 +1,9 @@
 # AI-Guided Docking Pipeline
 
 A generalised, AI-guided structure-based drug design pipeline. Works with any protein
-target, any PDB structure, and any binding site (not limited to MRP1). Parses AutoDock
-Vina logs, retrieves live ChEMBL reference data, auto-detects residue contacts, builds a
-target-specific system prompt, calls Claude (or a local Ollama model) for scaffold
+target, any PDB structure, and any binding site (initially built for but not limited to MRP1). 
+Parses AutoDock Vina logs, retrieves live ChEMBL reference data, auto-detects residue contacts,
+builds a target-specific system prompt, calls Claude (or a local Ollama model) for scaffold
 modification suggestions, validates returned SMILES with RDKit, and can auto-dock
 candidates across multiple autonomous optimisation cycles providing an binding affinity output 
 (kcal/mol).
