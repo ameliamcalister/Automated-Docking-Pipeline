@@ -80,9 +80,16 @@ optionally upload a Vina log and docked ligand PDBQT, and run one or more autono
 optimisation cycles interactively, with 3D pose visualisation and per-cycle downloads.
 Requires `docking_pipeline.py` in the same folder.
 
+## Limitations
+- Validated primarily on one target family (ABC transporters); testing across more diverse
+  binding-site geometries would strengthen the generality claim.
+- LLM-proposed modifications are checked for structural validity (RDKit) but not yet screened
+  against synthesisability.
+  
 ## Notes
 
 - Receptor/ligand structure files (`*.pdb`, `*.pdbqt`) and generated reports are excluded
   from version control by default — see `.gitignore`.
 - Built as part of an BSc final year project on computational MRP1 (ABCC1) inhibitor
   discovery at Imperial College London, generalised to support arbitrary targets.
+
