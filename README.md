@@ -1,11 +1,12 @@
 # AI-Guided Docking Pipeline
 
 A generalised, AI-guided structure-based drug design pipeline. Works with any protein
-target, any PDB structure, and any binding site (not limited to MRP1) — parses AutoDock
+target, any PDB structure, and any binding site (not limited to MRP1). Parses AutoDock
 Vina logs, retrieves live ChEMBL reference data, auto-detects residue contacts, builds a
 target-specific system prompt, calls Claude (or a local Ollama model) for scaffold
 modification suggestions, validates returned SMILES with RDKit, and can auto-dock
-candidates across multiple autonomous optimisation cycles.
+candidates across multiple autonomous optimisation cycles providing an binding affinity output 
+(kcal/mol).
 
 Two entry points are included:
 - `docking_pipeline.py` — command-line pipeline
@@ -53,7 +54,7 @@ python docking_pipeline.py \
     --yes
 ```
 
-For the MRP1 project specifically:
+Example from the MRP1 project specifically:
 
 ```bash
 python docking_pipeline.py \
@@ -83,5 +84,5 @@ Requires `docking_pipeline.py` in the same folder.
 
 - Receptor/ligand structure files (`*.pdb`, `*.pdbqt`) and generated reports are excluded
   from version control by default — see `.gitignore`.
-- Built as part of an MSc final year project on computational MRP1 (ABCC1) inhibitor
+- Built as part of an BSc final year project on computational MRP1 (ABCC1) inhibitor
   discovery at Imperial College London, generalised to support arbitrary targets.
